@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "Spoonflower Image Resizer",
+    "description": "Save a couple of seconds on Spoonflower",
+    "version": "1.0",
+    "minimum_chrome_version": "105",
+    "action": {
+        "default_icon": "favicon.png"
+    },
+    "host_permissions": [
+        "https://*.spoonflower.com/*"
+    ],
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "webNavigation"
+    ],
+    "content_scripts": [
+        {
+            "js": [
+                "scripts/content.js"
+            ],
+            "matches": [
+                "https://*.spoonflower.com/*"
+            ]
+        }
+    ],
+    "background": {
+        "service_worker": "scripts/background.js",
+        "type": "module"
+    }
+}
