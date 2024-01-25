@@ -1,11 +1,16 @@
 {
     "manifest_version": 3,
     "name": "Spoonflower Image Resizer",
-    "description": "Save a couple of seconds on Spoonflower",
+    "description": "Save a couple of seconds when saving images from Spoonflower",
     "version": "1.0",
     "minimum_chrome_version": "105",
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
     "action": {
-        "default_icon": "favicon.png"
+        "default_icon": "images/icon16.png"
     },
     "host_permissions": [
         "https://*.spoonflower.com/*"
