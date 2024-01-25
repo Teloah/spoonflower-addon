@@ -22,11 +22,14 @@
     ],
     "content_scripts": [
         {
+            "matches": [
+                "https://*.spoonflower.com/*"
+            ],
             "js": [
                 "scripts/content.js"
             ],
-            "matches": [
-                "https://*.spoonflower.com/*"
+            "css": [
+                "scripts/content.css"
             ]
         }
     ],
