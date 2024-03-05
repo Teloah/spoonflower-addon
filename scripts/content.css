@@ -1,4 +1,5 @@
-div.swiper-slide:has(img.spoonflower-xl)::after {
+div.swiper-slide:has(img.spoonflower-xl)::after,
+div.b-lazy-image:has(img.spoonflower-xl)::after {
   content: "L";
   position: absolute;
   bottom: 1px;
@@ -14,4 +15,9 @@ div.swiper-slide:has(img.spoonflower-xl)::after {
   font-size: 0.75rem;
   border-radius: 50%;
   border: 1px solid #fff;
+}
+
+div.b-lazy-image:has(img.spoonflower-xl)::after {
+  bottom: 3px;
+  left: 3px;
 }
