@@ -9,6 +9,8 @@ setTimeout(() => {
   };
 
   const updateLazyImages = () => {
+    // updates lazy loaded images in the products overview, for example
+    // https://www.spoonflower.com/en/products/16981942-party-style-m-floral-spinning-wheel-fireworks-yellow-on-dark-eggplant-violet-background-by-klaipina?product=homegoods-kitchen-dining
     const parentDiv = document.querySelector(".b-products-overview");
 
     if (!parentDiv) {
@@ -35,10 +37,10 @@ setTimeout(() => {
   };
 
   const updateImmediateImages = () => {
-    const productsSelectors = ["article.b-products-overview img.image"];
-    const designsSelectors = pageClasses.map(
-      (c) => `article.${c} ${imageSelector}`
-    );
+    // updates images that are immediately loaded on the page, for example
+    // https://www.spoonflower.com/en/fabric/16981942-party-style-m-floral-spinning-wheel-fireworks-yellow-on-dark-eggplant-violet-background-by-klaipina
+    const productsSelectors = [".b-products-overview img.image"];
+    const designsSelectors = pageClasses.map((c) => `.${c} ${imageSelector}`);
 
     const selector = productsSelectors.concat(designsSelectors).join(", ");
 
